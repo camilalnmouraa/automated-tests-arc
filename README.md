@@ -1,39 +1,39 @@
 # Automated Tests ARC
 
-Projeto de exemplo para testes automatizados com Cypress e Cucumber, utilizando GitHub Actions para CI/CD.
+Sample project for automated testing with Cypress and Cucumber, using GitHub Actions for CI/CD.
 
-- Executa testes end-to-end com `Cypress no Docker`.
-- Gera relatórios de testes com `multiple-cucumber-html-reporter`.
-- Publica relatórios no `GitHub Pages`.
+- Executes end-to-end tests with `Cypress in Docker`.
+- Generates test reports with `multiple-cucumber-html-reporter`.
+- Publishes reports on `GitHub Pages`.
 
-## Pré-requisitos
+## Prerequisites
 
-É necessário ter Node.js e npm instalados para rodar este projeto.
+You need to have Node.js and npm installed to run this project.
 
-> Usei as versões `v20.14.0` e `10.7.0` do Node.js e npm, respectivamente. Sugiro usar as mesmas versões ou versões mais recentes.
+> I used versions `v20.14.0` and `10.7.0` of Node.js and npm, respectively. I suggest using the same or later versions.
 
-## Instalação
+## Installation
 
-Execute `npm install` (ou `npm i` para a versão curta) para instalar as dependências de desenvolvimento.
+Run `npm install` (or `npm i` for the short version) to install the development dependencies.
 
 ## Lint
 
-Execute `npm run lint` para verificar a conformidade do código com as regras de lint.
+Run `npm run lint` to check code compliance with lint rules.
 
-## Testes
+## Tests
 
-Execute `npm run test` (ou `npm t` para a versão curta) para rodar os testes.
+Run `npm run test` (or `npm t` for the short version) to execute the tests.
 
-## Relatórios
+## Reports
 
-Execute `npm run generate-report` para gerar o relatório dos testes.
+Run `npm run generate-report` to generate the test report.
 
 ## CI/CD
 
-O projeto utiliza GitHub Actions para integração contínua e deploy dos relatórios no GitHub Pages.
+The project uses GitHub Actions for continuous integration and deployment of reports to GitHub Pages.
 
-> Após o workflow rodar, os relatórios estarão disponíveis em `https://<seu-usuario>.github.io/<seu-repositorio>`.
+> After the workflow runs, the reports will be available at `https://<your-username>.github.io/<your-repository>`.
 
 ___
 
-Este projeto foi criado por [Camila Moura](https://www.linkedin.com/in/camilalnmoura/) 🤘
+This project was created by [Camila Moura](https://www.linkedin.com/in/camilalnmoura/) 🤘
