@@ -1,0 +1,14 @@
+# credentials 
+cypress.env.json
+
+
+# error logs
+cypress/screenshots/
+cypress/videos/
+
+# report
+cypress/cucumber-json
+cypress/cucumber-report
+
+# project dependencies
+node_modules/
