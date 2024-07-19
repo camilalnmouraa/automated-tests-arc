@@ -24,6 +24,38 @@ Run `npm run lint` to check code compliance with lint rules.
 
 Run `npm run test` (or `npm t` for the short version) to execute the tests.
 
+> After running the tests, you should see a result like this:
+
+```sh
+> mocha
+
+
+   Running:  google_search.feature                                                           (1 of 1)
+
+
+  Google Search
+    ✓ Simple Search (7486ms)
+
+
+  1 passing (8s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     7 seconds                                                                        │
+  │ Spec Ran:     google_search.feature                                                            │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+```
+
 ## Reports
 
 Run `npm run generate-report` to generate the test report.
