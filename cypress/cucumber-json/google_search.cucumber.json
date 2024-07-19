@@ -1,0 +1,52 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Google Search",
+    "line": 1,
+    "id": "google-search",
+    "tags": [],
+    "uri": "google_search.feature",
+    "elements": [
+      {
+        "id": "google-search;simple-search",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Simple Search",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "A web browser is at the Google homepage",
+            "result": {
+              "status": "passed",
+              "duration": 2765000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "A user enters a search term \"Cypress testing framework\" and clicks on the search button",
+            "result": {
+              "status": "passed",
+              "duration": 5298000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "The search results page will display results related to \"Cypress testing framework\"",
+            "result": {
+              "status": "passed",
+              "duration": 14000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
