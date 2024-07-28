@@ -22,7 +22,7 @@
             "name": "A web browser is at the Google homepage",
             "result": {
               "status": "passed",
-              "duration": 2765000000
+              "duration": 2443000000
             }
           },
           {
@@ -32,7 +32,7 @@
             "name": "A user enters a search term \"Cypress testing framework\" and clicks on the search button",
             "result": {
               "status": "passed",
-              "duration": 5298000000
+              "duration": 4718000000
             }
           },
           {
@@ -42,7 +42,7 @@
             "name": "The search results page will display results related to \"Cypress testing framework\"",
             "result": {
               "status": "passed",
-              "duration": 14000000
+              "duration": 29000000
             }
           }
         ]

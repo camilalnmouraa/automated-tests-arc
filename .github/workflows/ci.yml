@@ -53,9 +53,14 @@ jobs:
   cypress-tests:
     needs: eslint
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        config:
+          - { name: desktop, width: 1280, height: 720, browser: chrome }
+          - { name: ipad, width: 768, height: 1024, browser: chrome }
+          - { name: iphone, width: 375, height: 667, browser: chrome }
     steps:
       - uses: actions/checkout@v3
-
       - name: Restore node_modules cache
         uses: actions/cache@v2
         with:
@@ -63,14 +68,13 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-
-
-      - name: Build Docker image
-        run: docker build -t automated-tests-github-actions:1.1 .
-
-      - name: Run Cypress tests in Docker container
-        run: |
-          docker run -dti -v ${{ github.workspace }}:/cucumberproject automated-tests-github-actions:1.1
-
+      - name: Install dependencies
+        run: npm ci
+      - name: Build Docker image for ${matrix.config.name} on ${matrix.config.browser}
+        run: docker build -t automated-tests-github-actions-${{ matrix.config.name }}-${{ matrix.config.browser }}:1.1 .
+      - name: Run Cypress tests in Docker container for ${matrix.config.name} on ${matrix.config.browser}
+        run: docker run --name cypress-tests-${{ matrix.config.name }}-${{ matrix.config.browser }} -e CYPRESS_viewportWidth=${{ matrix.config.width }} -e CYPRESS_viewportHeight=${{ matrix.config.height }} -e CYPRESS_browser=${{ matrix.config.browser }} -v ${{ github.workspace }}:/var/cucumberproject automated-tests-github-actions-${{ matrix.config.name }}-${{ matrix.config.browser }}:1.1
+        
   generate-report:
     needs: cypress-tests
     runs-on: ubuntu-latest
